@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0D0D12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Syne", sans-serif;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.main {
+    padding: 100px;
+    max-width: 900px;
+}
+
+.ag-timeline {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ag-timeline_line {
+    width: 3px;
+    background-color: #19191E;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    overflow: hidden;
+    -webkit-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -o-transform: translate(-100%);
+    transform: translate(-100%);
+}
+
+.timeline_line-progress {
+    width: 100%;
+    height: 0%;
+    background-color: #00515B;
+}
+
+.js-timeline-card_point-box {
+    width: 50px;
+    height: 50px;
+    background-color: #0D0D12;
+    position: absolute;
+    left: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.ag-timeline-card_point {
+    height: 20px;
+    line-height: 11px;
+    width: 20px;
+    background-color: #19191E;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.js-ag-active .ag-timeline-card_point {
+    background-color: white;
+}
+
+.timeline_item {
+    height: 300px;
+}
+
+
+.js-timeline-card_meta-box {
+    opacity: 0;
+    border-radius: 6px;
+    position: relative;
+    -webkit-transition: -webkit-transition .5s, opacity .5s;
+    -moz-transition: -moz-transition .5s, opacity .5s;
+    -o-transition: -o-transition .5s, opacity .5s;
+    transition: transform .5s, opacity .5s;
+    color: white;
+    margin-left: 70px;
+}
+
+.js-ag-active .js-timeline-card_meta-box {
+    opacity: 1;
+}
+
+.ag-timeline-card_meta span {
+    font-size: 12px;
+}
+
+.ag-timeline-card_meta h1 {
+    font-size: 36px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    background-image: linear-gradient(75deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0.54));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ag-timeline-card_description {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    background-image: linear-gradient(168deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 2.54));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 767px) {
+
+    .main{
+        width: 100%;
+        padding: 40px;
+        padding-bottom: 100px;
+    }
+
+    .js-timeline-card_meta-box{
+        margin-left: 50px;
+    }
+
+    .timeline_item{
+        height: 400px;
+    }
+}
